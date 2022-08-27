@@ -7,7 +7,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'tpope/vim-fugitive'
 
 	" Themes
-	Plug 'rose-pine/neovim', {'as': 'rose-pine'}
+	Plug 'arcticicestudio/nord-vim'
 
 	" Autocompletion engine
 	Plug 'hrsh7th/cmp-nvim-lsp'
@@ -38,10 +38,19 @@ call plug#end()
 luafile $HOME/.config/nvim/config/plugins_config.lua
 
 "--- STYLE
+set nocompatible
+if (has("termguicolors"))
+  set termguicolors
+endif
+
 set number
+syntax enable
 set laststatus=3
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
+colorscheme nord
+
 highlight WinSeparator guibg=None
-colorscheme rose-pine 
 hi Normal guibg=NONE ctermbg=NONE
 hi EndOfBuffer guibg=NONE ctermbg=NONE
 
