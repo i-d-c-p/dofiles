@@ -5,6 +5,8 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	Plug 'neovim/nvim-lspconfig'
 	Plug 'tpope/vim-fugitive'
+	Plug 'sindrets/diffview.nvim'
+	Plug 'kyazdani42/nvim-web-devicons'
 
 	" Themes
 	Plug 'arcticicestudio/nord-vim'
