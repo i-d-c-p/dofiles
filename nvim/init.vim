@@ -17,6 +17,7 @@ call plug#begin('~/.config/nvim/plugged')
 	" Themes
 	Plug 'arcticicestudio/nord-vim'
 	Plug 'kyazdani42/nvim-web-devicons'
+	" Plug 'levouh/tint.nvim'
 
 	" Autocompletion engine
 	Plug 'hrsh7th/cmp-nvim-lsp'

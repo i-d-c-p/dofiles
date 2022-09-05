@@ -116,8 +116,6 @@ require'lspconfig'.pyright.setup{
 	capabilities = capabilities,
 }
 
-
-
 --- SETUP DAP
 vim.keymap.set("n", "<F1>", ":lua require'dap'.continue()<cr>")
 vim.keymap.set("n", "<F2>", ":lua require'dap'.step_into()<cr>")
@@ -143,6 +141,8 @@ dap.listeners.before.event_exited["dapui_config"] = function()
 end
 
 --- THEME SETUP
+
+-- require("tint").setup()
 local sign = vim.fn.sign_define
 
 sign("DapBreakpoint", { text = "●", texthl = "DapBreakpoint", linehl = "", numhl = ""})
