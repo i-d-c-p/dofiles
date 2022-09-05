@@ -1,15 +1,22 @@
 "-- PLUGINS
 call plug#begin('~/.config/nvim/plugged')
+	" Airline
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
+
+	" Treesitter
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+	" LSP config
 	Plug 'neovim/nvim-lspconfig'
+
+	" Git tools
 	Plug 'tpope/vim-fugitive'
 	Plug 'sindrets/diffview.nvim'
-	Plug 'kyazdani42/nvim-web-devicons'
 
 	" Themes
 	Plug 'arcticicestudio/nord-vim'
+	Plug 'kyazdani42/nvim-web-devicons'
 
 	" Autocompletion engine
 	Plug 'hrsh7th/cmp-nvim-lsp'
@@ -25,8 +32,11 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-telescope/telescope.nvim'
 
-	"Todos comments
+	" Todo comments
 	Plug 'folke/todo-comments.nvim'
+
+	" Comments tool
+	Plug 'numToStr/Comment.nvim'
 
 	" Nvim DAP
 	Plug 'mfussenegger/nvim-dap'
@@ -114,3 +124,5 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 "--- AUTOMCOMPLETION
 set completeopt=menu,menuone,noselect
 
+"--- FOLDING
+set foldmethod=indent

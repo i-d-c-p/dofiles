@@ -1,6 +1,9 @@
 --- TODOS CONFIGURATION
 require("todo-comments").setup {}
 
+--- COMMENTS CONFIG
+require('Comment').setup()
+
 --- ADD TREESITTER CONFIG
 require'nvim-treesitter.configs'.setup {
 	--ensure_installed = { "go" },
@@ -74,15 +77,15 @@ cmp.setup.cmdline(':', {
 	})
 })
 
---- SETUP GOLANG 
--- Setup LSP
+--- SETUP LSP
 vim.api.nvim_create_autocmd("BufWritePre",
-	{ pattern = { "*.go"}, command = "lua vim.lsp.buf.formatting()"}
+	{ pattern = { "*.go", "*.py"}, command = "lua vim.lsp.buf.formatting()"}
 )
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+--- SETUP GOLANG 
 require'lspconfig'.gopls.setup{
 	capabilities = capabilities,
 	settings = {
@@ -107,6 +110,13 @@ require'lspconfig'.gopls.setup{
 		vim.keymap.set('n', '<leader>cr', vim.lsp.buf.formatting, {buffer=0})
 	end,
 }
+
+--- SETUP PYTHON
+require'lspconfig'.pyright.setup{
+	capabilities = capabilities,
+}
+
+
 
 --- SETUP DAP
 vim.keymap.set("n", "<F1>", ":lua require'dap'.continue()<cr>")
