@@ -1,3 +1,7 @@
+---	MASON
+require("mason").setup()
+require("mason-lspconfig").setup()
+
 --- TODOS CONFIGURATION
 require("todo-comments").setup {}
 

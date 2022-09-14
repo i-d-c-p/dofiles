@@ -8,7 +8,9 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 	" LSP config
+	Plug 'williamboman/mason.nvim'
 	Plug 'neovim/nvim-lspconfig'
+	Plug 'williamboman/mason-lspconfig.nvim'
 
 	" Git tools
 	Plug 'tpope/vim-fugitive'
