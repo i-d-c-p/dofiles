@@ -1,0 +1,11 @@
+type(scope): desc
+#
+# body - optional
+# footer - optional
+#
+# type:
+#	- feat|new: New feature or new resource.
+#	- fix|edit: Change to fix a bug or editing the content of an existing resource.
+#	- style: Change the style of code or resource without affecting the content 
+#	- refactor: Refactoring code or resources relations
+#	- docs: Documentation related changes

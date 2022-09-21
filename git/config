@@ -1,5 +1,9 @@
 [user]
 	name = Iván Contreras 
 	email = idcp0496@gmail.com
+[submodule]
+	recurse = true
+[commit]
+	template = ~/.config/git/personal/commit-format
 [core]
 	editor = nvim
