@@ -1,4 +1,4 @@
-type(scope): desc # (<issue number>)
+type(scope): desc (issue.number)
 
 #
 # body - optional
