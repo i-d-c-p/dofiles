@@ -1,4 +1,5 @@
-type(scope): desc
+type(scope): desc # (<issue number>)
+
 #
 # body - optional
 # footer - optional
