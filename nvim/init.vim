@@ -4,6 +4,10 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 
+	" Neotree
+	Plug 'nvim-neo-tree/neo-tree.nvim'
+	Plug 'MunifTanjim/nui.nvim'
+
 	" Treesitter
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
