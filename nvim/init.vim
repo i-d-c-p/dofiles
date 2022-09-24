@@ -122,6 +122,9 @@ nnoremap <silent><c-s> :<c-u>update<cr>
 vnoremap <silent><c-s> <c-c>:update<cr>gv
 inoremap <silent><c-s> <c-o>:update<cr><Esc>
 
+"--- KEYBINDINGS CLOSE BUFFER
+nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
+
 "--- VIM-AIRLINE CONFIG
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
